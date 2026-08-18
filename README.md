@@ -9,21 +9,21 @@ Dieses Repository dokumentiert ein schulisches Teamprojekt am BSZ Wiesau. Ziel w
 - Einrichtung von SVIs und Inter-VLAN-Routing
 - Konfiguration der DHCP-Adressvergabe
 - Anbindung eines Edge Routers über ein Transitnetz
-- Einrichtung von ACLs zur Einschränkung des Netzwerkzugriffs
-- Aufbau redundanter Netzwerkverbindungen
+- Erarbeitung eines ACL-Konzepts zur Einschränkung des Netzwerkzugriffs
+- Vorbereitung redundanter Netzwerkpfade
 - Durchführung von Funktionstests und Fehleranalysen
 - Dokumentation der Konfiguration und Testergebnisse
 
 ## Verwendete Technik
 
-- Cisco Catalyst 9200
+- Cisco Catalyst 9200L
 - Cisco Catalyst 8200 Edge Router
 - Cisco Access Switches
 - VLAN und IEEE 802.1Q
 - IPv4 und Subnetting
 - DHCP
 - Inter-VLAN-Routing
-- Access Control Lists
+- ACL-Konzept
 - Cisco IOS CLI
 
 ## Netzwerkaufteilung
