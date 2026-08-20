@@ -7,6 +7,7 @@ Dieses Repository dokumentiert ein schulisches Teamprojekt am BSZ Wiesau. Ziel w
 ![Netzwerkplan der VLAN-basierten Netzwerkinfrastruktur](docs/netzwerkplan-vlan-standort-b.png)
 
 Der Netzwerkplan zeigt den umgesetzten Stand der VLAN-Struktur. ACLs und die VPN-Anbindung waren als Erweiterung vorgesehen, aber nicht Teil der abgeschlossenen Umsetzung.
+
 ## Projektumfang
 
 - Einrichtung separater VLANs für verschiedene Abteilungen
@@ -52,8 +53,10 @@ Während der Umsetzung mussten unter anderem eine nicht bekannte Gerätekonfigur
 
 Durch das Projekt konnte ich meine Kenntnisse in den Bereichen VLAN-Konfiguration, Routing, DHCP und systematischer Fehleranalyse vertiefen. Besonders wichtig waren eine einheitliche Konfiguration aller Netzwerkgeräte, nachvollziehbare Tests und eine saubere Dokumentation.
 
-## Dokumentation
+## Projektdokumentation
 
-Eine bereinigte Fassung der Projektdokumentation und weitere technische Unterlagen werden ergänzt.
+[Öffentliche Portfolio-Dokumentation als PDF ansehen](docs/VLAN-Netzwerkprojekt_Portfolio.pdf)
+
+Die kompakte Fassung enthält die Netzwerkplanung, ausgewählte Konfigurationsbeispiele, die Fehleranalyse, Funktionstests und eine klare Abgrenzung meines persönlichen Beitrags.
 
 > Hinweis: Das Projekt wurde in einer schulischen Laborumgebung durchgeführt. Verwendete Konfigurationen und IP-Adressen stellen keine produktive Unternehmensumgebung dar.
