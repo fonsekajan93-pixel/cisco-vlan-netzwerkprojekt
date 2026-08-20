@@ -1,0 +1,33 @@
+! ÖFFENTLICHES KONFIGURATIONSBEISPIEL
+! Rekonstruiert anhand der Projektdokumentation und der gespeicherten
+! Befehlsauszüge. Dies ist keine vollständige Original-Running-Config.
+! Passwörter und Zugangsdaten sind nicht enthalten.
+
+hostname SW-1-B
+
+! Einheitliche VLAN-Datenbank
+vlan 10
+ name PM
+vlan 20
+ name F&E
+vlan 30
+ name M&V
+vlan 100
+ name Server-Netz
+
+! Dokumentierte Switch-Uplinks
+interface range GigabitEthernet1/0/1, GigabitEthernet1/0/3
+ switchport mode trunk
+ switchport trunk native vlan 1
+ switchport trunk allowed vlan 10,20,30,100
+ no shutdown
+
+! Arbeitsplätze Projektmanagement
+interface range GigabitEthernet1/0/5 - 11
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ no shutdown
+
+! Konfiguration anschließend speichern:
+! copy running-config startup-config

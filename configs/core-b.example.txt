@@ -1,0 +1,68 @@
+! ÖFFENTLICHES KONFIGURATIONSBEISPIEL
+! Rekonstruiert anhand der Projektdokumentation und der gespeicherten
+! Befehlsauszüge. Dies ist keine vollständige Original-Running-Config.
+! Pool-Namen und Kommentare wurden für die Lesbarkeit vereinheitlicht.
+! Passwörter und Zugangsdaten sind nicht enthalten.
+
+hostname Core-B
+
+! VLAN-Datenbank
+vlan 10
+ name PM
+vlan 20
+ name F&E
+vlan 30
+ name M&V
+vlan 100
+ name Server-Netz
+
+! Layer-3-Routing auf dem Core-Switch
+ip routing
+
+interface Vlan10
+ ip address 192.168.110.1 255.255.255.0
+ no shutdown
+
+interface Vlan20
+ ip address 192.168.120.1 255.255.255.0
+ no shutdown
+
+interface Vlan30
+ ip address 192.168.130.1 255.255.255.0
+ no shutdown
+
+interface Vlan100
+ ip address 192.168.100.1 255.255.255.0
+ no shutdown
+
+! DHCP für die Client-VLANs
+service dhcp
+
+ip dhcp excluded-address 192.168.110.1 192.168.110.10
+ip dhcp pool POOL_VLAN_10
+ network 192.168.110.0 255.255.255.0
+ default-router 192.168.110.1
+ dns-server 8.8.8.8
+
+ip dhcp excluded-address 192.168.120.1 192.168.120.10
+ip dhcp pool POOL_VLAN_20
+ network 192.168.120.0 255.255.255.0
+ default-router 192.168.120.1
+
+ip dhcp excluded-address 192.168.130.1 192.168.130.10
+ip dhcp pool POOL_VLAN_30
+ network 192.168.130.0 255.255.255.0
+ default-router 192.168.130.1
+
+! Dokumentierte Transitadressierung:
+! Core-B:     192.168.250.2/30
+! R-Edge-B1: 192.168.250.1/30
+! Die genaue physische Transit-Schnittstelle ist in den erhaltenen
+! Befehlsauszügen nicht eindeutig dokumentiert und wird daher nicht ergänzt.
+
+! Korrektur des Startverhaltens nach der Fehleranalyse
+no system ignore-startup-config
+config-register 0x2102
+
+! Konfiguration anschließend speichern:
+! copy running-config startup-config

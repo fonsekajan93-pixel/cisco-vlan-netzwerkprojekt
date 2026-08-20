@@ -1,0 +1,57 @@
+ÖFFENTLICHE ÜBERSICHT DER PRÜFBEFEHLE
+========================================
+
+Die Befehle stammen aus dem dokumentierten Testkonzept des Projekts.
+Sie enthalten keine Zugangsdaten und keine vollständigen Gerätekonfigurationen.
+
+1. VLAN-DATENBANK UND PORT-ZUWEISUNGEN
+--------------------------------------
+show vlan brief
+
+Erwarteter Nachweis:
+- VLAN 10, 20, 30 und 100 sind aktiv.
+- Die Access-Ports sind den vorgesehenen VLANs zugewiesen.
+
+2. TRUNK-VERBINDUNGEN
+---------------------
+show interfaces trunk
+
+Erwarteter Nachweis:
+- Gi1/0/1 und Gi1/0/3 arbeiten als Trunks.
+- Die Allowed-VLAN-Liste enthält 10, 20, 30 und 100.
+
+3. SVI-GATEWAYS UND ROUTING
+---------------------------
+show ip interface brief
+ping 192.168.120.1
+
+Erwarteter Nachweis:
+- Die SVIs sind mit den dokumentierten Gateway-Adressen aktiv.
+- Das Gateway von VLAN 20 ist aus VLAN 10 erreichbar.
+
+4. DHCP-ADRESSVERGABE
+---------------------
+show ip dhcp binding
+
+Windows-Testclient:
+ipconfig /renew
+ipconfig /all
+
+Dokumentiertes Ergebnis:
+- Der Testclient erhielt 192.168.110.11 aus dem Pool von VLAN 10.
+
+5. TRANSITNETZ ZUM EDGE-ROUTER
+------------------------------
+ping 192.168.250.1
+
+Dokumentiertes Ergebnis:
+- R-Edge-B1 war von Core-B über das /30-Transitnetz erreichbar.
+
+6. STARTKONFIGURATION UND REGISTER
+----------------------------------
+show version | include register
+copy running-config startup-config
+
+Dokumentiertes Ergebnis:
+- Das Konfigurationsregister stand auf 0x2102.
+- Die Startup-Config wurde nach dem Neustart geladen.
