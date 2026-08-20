@@ -2,6 +2,11 @@
 
 Dieses Repository dokumentiert ein schulisches Teamprojekt am BSZ Wiesau. Ziel war es, für einen simulierten Unternehmensstandort eine strukturierte und segmentierte Netzwerkinfrastruktur aufzubauen und zu konfigurieren.
 
+## Netzwerkplan
+
+![Netzwerkplan der VLAN-basierten Netzwerkinfrastruktur](docs/netzwerkplan-vlan-standort-b.png)
+
+Der Netzwerkplan zeigt den umgesetzten Stand der VLAN-Struktur. ACLs und die VPN-Anbindung waren als Erweiterung vorgesehen, aber nicht Teil der abgeschlossenen Umsetzung.
 ## Projektumfang
 
 - Einrichtung separater VLANs für verschiedene Abteilungen
