@@ -58,4 +58,10 @@ Durch das Projekt konnte ich meine Kenntnisse in den Bereichen VLAN-Konfiguratio
 
 Die kompakte Fassung enthält die Netzwerkplanung, ausgewählte Konfigurationsbeispiele, die Fehleranalyse, Funktionstests und eine klare Abgrenzung meines persönlichen Beitrags.
 
+## Konfigurationsbeispiele
+
+[Rekonstruierte Cisco-Konfigurationen und Prüfbefehle ansehen](configs/)
+
+Die Beispiele zeigen zentrale Bestandteile der VLAN-, Routing-, DHCP- und Switch-Konfiguration sowie verwendete Befehle zur Funktionsprüfung.
+
 > Hinweis: Das Projekt wurde in einer schulischen Laborumgebung durchgeführt. Verwendete Konfigurationen und IP-Adressen stellen keine produktive Unternehmensumgebung dar.
