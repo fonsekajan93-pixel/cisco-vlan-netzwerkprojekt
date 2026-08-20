@@ -15,7 +15,7 @@ Der Netzwerkplan zeigt den umgesetzten Stand der VLAN-Struktur. ACLs und die VPN
 - Einrichtung von SVIs und Inter-VLAN-Routing
 - Konfiguration der DHCP-Adressvergabe
 - Anbindung eines Edge Routers über ein Transitnetz
-- Erarbeitung eines ACL-Konzepts zur Einschränkung des Netzwerkzugriffs
+- Berücksichtigung eines ACL-Regelwerks als mögliche Erweiterung
 - Vorbereitung redundanter Netzwerkpfade
 - Durchführung von Funktionstests und Fehleranalysen
 - Dokumentation der Konfiguration und Testergebnisse
@@ -29,7 +29,6 @@ Der Netzwerkplan zeigt den umgesetzten Stand der VLAN-Struktur. ACLs und die VPN
 - IPv4 und Subnetting
 - DHCP
 - Inter-VLAN-Routing
-- ACL-Konzept
 - Cisco IOS CLI
 
 ## Netzwerkaufteilung
